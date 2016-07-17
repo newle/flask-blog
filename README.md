@@ -39,6 +39,8 @@ pass:demo
 # Installation:
 `sudo yum install -y python-virtualenv`
 
+`sudo yum install -y mongodb-server mongodb`
+
 `git clone https://github.com/dmaslov/flask-blog.git`
 
 `cd flask-blog`
