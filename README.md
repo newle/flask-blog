@@ -124,3 +124,7 @@ The word will be replaced with a working gist tag.
 
 # Upd:
 Don't need to highlight text to add a link or an image anymore. Now you can simply click some tag in the editor menu and put a link. The 'Markdown' tag will be created automatically with a highlighted temporary description. The existing pasting algorithm works as it did before.
+
+# Tools:
+1. ban ip list
+        cat /var/log/secure | grep "Failed" | awk '{a[$2"\t"$(NF-3)]++}END{for(i in a){print i"\t"a[i]}}' | awk '$3 > 10{print $2}' | sort -u | tee ban_ip_`date +"%Y%m%d"` | xargs -I{}  iptables -I INPUT -s {} -j DROP
