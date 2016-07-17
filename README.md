@@ -37,6 +37,8 @@ pass:demo
 
 
 # Installation:
+`sudo yum install -y python-virtualenv`
+
 `git clone https://github.com/dmaslov/flask-blog.git`
 
 `cd flask-blog`
